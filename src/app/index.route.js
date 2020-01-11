@@ -12,7 +12,7 @@ function routerConfig($stateProvider, $urlRouterProvider, $locationProvider, the
     toastMessageService,
     uiSettingsService,
     updaterService) => {
-    let localhostApiURL = `http://${$window.location.hostname }/api`;
+    let localhostApiURL = `https://${$window.location.hostname }/api`;
     return $http.get(localhostApiURL + '/host').then((response) => {
       console.info('IP from API', response);
       $rootScope.initConfig = response.data;

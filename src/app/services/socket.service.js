@@ -68,7 +68,7 @@ class SocketService {
       this.$window.socket.disconnect();
       this.$window.socket.removeAllListeners();
     }
-    this.$window.socket = io(this.host, {timeout: 500});
+    this.$window.socket = io('https://volumio.boheme.local', {timeout: 500});
     this.$window.socket.connect();
     this.$window.socket.on('connect_error', () => {
       this.$log.debug(`Socket connect_error for host ${this.host}`);

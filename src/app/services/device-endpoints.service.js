@@ -35,7 +35,7 @@ class DeviceEndpointsService {
   }
 
   getLocalSocketHosts() {
-    let localhostApiURL = `http://${this.$window.location.hostname}/api`;
+    let localhostApiURL = `https://${this.$window.location.hostname}/api`;
     return this.$http.get(localhostApiURL + '/host')
       .then((response) => {
         this.$log.debug('IP from API', response);
